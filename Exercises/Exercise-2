@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <h1>Exercise 2</h1>
+  <head>
     <style>
     #square {
       width: 400px;
