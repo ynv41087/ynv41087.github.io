@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="en">
+ <div id="holder">
+    <div id="square1"></div>
+    <div id="square2"></div>
+  </div>
+</html>
