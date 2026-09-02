@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <style>
+    #holder {
+      width: 400px;
+      height: 400px;
+      background-color: lightblue;
+      position: relative;
+    }
+    #square1 {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+    }
+    #square2 {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      position: absolute;
+      top: 200px;
+      left: 200px;
+    }
+</html>
