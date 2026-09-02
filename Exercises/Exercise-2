@@ -1,48 +1,43 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Exercise 2</title>
     <style>
     #square {
       width: 400px;
       height: 400px;
       background-color: magenta;
       position: relative;
-    }
-    #square1 {
-      width: 400px;
-      height: 400px;
-      background-color:Blue;
-      position: absolute;
-      top: 50px;
-      left: 50px;
-    }
-    #square2 {
-      width: 400px;
-      height: 400px;
-      background-color: Yellow;
-      position: absolute;
-      top: 200px;
-      left: 200px;
-    }
-    #square3 {
-      width: 400px;
-      height: 400px;
-      background-color: Green;
-      position: absolute;
-      top: 350px;
-      left: 350px;
-    }
-    </style>
-  </head>
-  <body>
-     <div id="holder">
-        <div id="square1"></div>
-        <div id="square2"></div>
-        <div id="square3"></div>
-      </div>
+}
+#square1 {
+width: 400px;
+height: 400px;
+background-color:Blue;
+position: absolute;
+top: 50px;
+left: 50px;
+}
+ #square2 {
+ width: 400px;
+height: 400px;
+background-color: Yellow;
+position: absolute;
+top: 200px;
+left: 200px;
+}
+#square3 {
+width: 400px;
+ height: 400px;
+background-color: Green;
+position: absolute;
+top: 350px;
+left: 350px;
+}
+</style>
+</head>
+<body>
+  <div id="holder">
+  <div id="square1"></div>
+  <div id="square2"></div>
+ <div id="square3"></div>
+ </div>
 </body>
 </html>
