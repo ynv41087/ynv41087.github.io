@@ -16,17 +16,7 @@
       margin: 0;
       padding: 0;
     }
-    site-header {
-      max-width: 100%;
-      width: 1440px;
-      background-color: #fff;
-      border: 2px solid #ccc;
-      padding: 15px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    body {
+    .body {
       font-family: Arial, Helvetica, sans-serif;
       display: flex;
       justify-content: center;
@@ -36,7 +26,7 @@
       padding: 20px;
     }
     /*Main container with the fixed width of 1440px*/
-    site-header {
+    .layout-container {
         max-width: 100%;
         width: 1440px;
         background-color: #fff;
@@ -45,6 +35,45 @@
         display: flex;
         flex-direction: column;
         gap: 15px;
+    }
+    /* Shared style for all text cells */
+    .site-header, .col-a, .col-b, .col-50, .col-33, .footer {
+      border: 1px solid #aaa;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #333;
+      font-size: 14px;
+      min-height: 100px;
+    }
+
+    .sub-text {
+      font-size: 12px;
+      color: #777;
+      margin-top: 4px;
+    }
+
+    /* Rows Configuration */
+    .col-33{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .col-50 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    /* Fixed 200px column with flexible remainder (1fr) */
+    .col-100 {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      gap: 10px;
     }
     </style>
   </head>
