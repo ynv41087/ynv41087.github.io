@@ -28,7 +28,7 @@
     }
 
     /* Main Container with the fixed design width constraint */
-    .layout-container {
+    .col-100 {
       width: 100%;
       max-width: 1440px;
       background-color: #fff;
@@ -60,20 +60,20 @@
     }
 
     /* Rows Configuration */
-    .row-33 {
+    .row-3 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
     }
 
-    .row-50 {
+    .row-2 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
     }
 
     /* Fixed 200px column with flexible remainder (1fr) */
-    .row-mixed {
+    .row-1 {
       display: grid;
       grid-template-columns: 1fr 200px;
       gap: 10px;
@@ -90,17 +90,17 @@
     </header>
     <main>
       <div id="content">
-        <div class="row">
+        <div class="row 1">
           <div class="col-a">col-a</div>
           <div class="col-b">col-b<br />(width 200px)</div>
         </div>
 
-        <div class="row">
+        <div class="row 2">
           <div class="col-50">col-50</div>
           <div class="col-50">col-50</div>
         </div>
 
-        <div class="row">
+        <div class="row 3">
           <div class="col-33">col-33</div>
           <div class="col-33">col-33</div>
           <div class="col-33">col-33</div>
