@@ -19,21 +19,6 @@
       background-color: #494545;
       padding: 20px;
     }
-    .cell {
-      border: 1px solid #aaa;
-      max-width: 1420px;
-      margin: 0;
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #333;
-      font-size: 14px;
-      min-height: 100px;
-      background-color: #fafafa;
-
 
     /* Main Container with the fixed design width constraint */
     .layout-container {
@@ -53,7 +38,20 @@
     }
 
     /* Shared style for all text cells */
-
+    .cell {
+      border: 1px solid #aaa;
+      max-width: 1420px;
+      margin: 0;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #333;
+      font-size: 14px;
+      min-height: 100px;
+      background-color: #fafafa;
     }
 
     .sub-text {
@@ -84,13 +82,14 @@
   </style>
 </head>
 <body>
-    <!-- Header Row -->
+
+  <div class="layout-container">
+     <!-- Header Row -->
     <div class="cell">
       <strong>header: col-100</strong>
       <span class="sub-text">This entire layout is 1440px wide</span>
     </div>
 
-  <div class="layout-container">
     <!-- Mixed Row (col-a and col-b) -->
     <div class="row-mixed">
       <div class="cell">col-a</div>
