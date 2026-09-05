@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Layout Recreation</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Main Container setup to exactly 1440px wide */
+        .layout-container {
+            width: 1440px;
+            background-color: #ffffff;
+            border: 2px solid #333333;
+            display: grid;
+            /* Defining the 3 distinct columns based on the labels */
+            grid-template-columns: 33.33% 50% 200px; 
+            grid-template-rows: auto auto;
+        }
+
+        /* Common styling for all grid cells */
+        .cell {
+            border: 1px solid #999999;
+            padding: 40px 20px;
+            text-align: center;
+            font-weight: bold;
+            color: #333333;
+            background-color: #fafafa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Full-width Header spanning all 3 columns */
+        .header {
+            grid-column: span 3;
+            background-color: #eaeaea;
+            padding: 30px;
+        }
+
+        /* Internal column structures to hold the vertical stacks */
+        .column {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .column .cell {
+            flex: 1;
+        }
+
+        /* Specific background for the footer cell inside the middle column */
+        .footer-cell {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="layout-container">
+        <!-- Header Row -->
+        <div class="cell header">header: col-100</div>
+
+        <!-- Left Column (33.33% width stacked with three col-33 sections) -->
+        <div class="column">
+            <div class="cell">col-33</div>
+            <div class="cell">col-33</div>
+            <div class="cell">col-33</div>
+        </div>
+
+        <!-- Middle Column (50% width containing two col-50s and a footer) -->
+        <div class="column">
+            <div class="cell">col-50</div>
+            <div class="cell footer-cell">footer: col-100</div>
+            <div class="cell">col-50</div>
+        </div>
+
+        <!-- Right Column (Fixed 200px width with col-a and col-b) -->
+        <div class="column">
+            <div class="cell">col-a</div>
+            <div class="cell">col-b<br>(width 200px)</div>
+        </div>
+    </div>
+
+</body>
+</html>
