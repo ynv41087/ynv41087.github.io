@@ -5,7 +5,7 @@
     font-family:Arial, sans-serif;
 }
 body {min-height:100vh;
-    background-image:linear-gradientlinear-gradient(
+    background-image:linear-gradient(
      #ff7e5f,
      #feb47b,
      pink,
@@ -46,5 +46,5 @@ nav > a{
 }
 section{
     padding:10%;
-    color:#000000
+    color:#000000;
 }
