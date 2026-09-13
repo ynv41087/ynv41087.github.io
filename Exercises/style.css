@@ -32,7 +32,7 @@ nav ul{
     list-style:none;
 }
 nav ul a{
-    color:#fff;
+    color:#white;
     padding:5px 15px;
     border-radius:5px;
     transition:0.3s ease;
@@ -40,11 +40,11 @@ nav ul a{
     text-decoration:none;
 }
 nav > a{
-    color:#fff;
+    color:#white;
     font: size 32px;px;
     text-decoration:none;
 }
 section{
     padding:10%;
-    color:#fff
+    color:#000000
 }
