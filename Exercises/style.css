@@ -1,15 +1,16 @@
-*{padding:0
-margin:0
-box-sizing:border-box;
-font-family:Arial, sans-serif;
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 body {min-height:100vh;
     background-image:linear-gradientlinear-gradient(
      #ff7e5f,
-     #feb47b
-     pink
-     purple
-     fuchsia
+     #feb47b,
+     pink,
+     purple,
+     fuchsia,
      lightpink);
 nav{
     position:fixed;
