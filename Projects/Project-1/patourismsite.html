@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patourism | Explore Beautiful Destinations</title>
+  <style>
+    :root {
+      --bg: #f5f3ee;
+      --card: #ffffff;
+      --primary: #0f766e;
+      --primary-dark: #115e59;
+      --accent: #fbbf24;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(to bottom, #f9fafb, #eef7f7);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(17, 94, 89, 0.08);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 0;
+    }
+
+    .brand {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--primary-dark);
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s ease;
+      box-shadow: 0 8px 20px rgba(15, 118, 110, 0.25);
+    }
+
+    .button:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      padding: 80px 0 60px;
+      background:
+        linear-gradient(120deg, rgba(15, 23, 42, 0.1), rgba(15, 118, 110, 0.1)),
+        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .hero-copy {
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      padding: 36px;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(251, 191, 36, 0.18);
+      color: var(--primary-dark);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      line-height: 1.05;
+      margin: 0 0 18px;
+      color: #0f172a;
+    }
+
+    .lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+      max-width: 650px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .secondary {
+      background: transparent;
+      color: var(--primary-dark);
+      border: 2px solid rgba(17, 94, 89, 0.25);
+      box-shadow: none;
+    }
+
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 26px;
+      margin-top: 16px;
+    }
+
+    .stat {
+      min-width: 120px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.8rem;
+      color: var(--primary-dark);
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .booking-card {
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+      border: 1px solid rgba(15, 118, 110, 0.08);
+    }
+
+    .booking-card h3 {
+      margin: 0 0 20px;
+      font-size: 1.5rem;
+      color: var(--primary-dark);
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .field input, .field select {
+      width: 100%;
+      border: 1px solid rgba(17, 94, 89, 0.12);
+      border-radius: 12px;
+      padding: 12px 14px;
+      font: inherit;
+      background: #f8fafc;
+      color: var(--text);
+    }
+
+    .booking-card .button {
+      width: 100%;
+      margin-top: 8px;
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-head h2 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      color: var(--primary-dark);
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .feature {
+      background: var(--card);
+      border-radius: 24px;
+      padding: 28px 22px;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.05);
+      border: 1px solid rgba(15, 118, 110, 0.06);
+    }
+
+    .icon {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: rgba(15, 118, 110, 0.1);
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+    }
+
+    .feature h3 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+      color: var(--text);
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .destinations {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    .destination {
+      background: var(--card);
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: 0 18px 32px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(15, 118, 110, 0.08);
+    }
+
+    .destination img {
+      height: 240px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .destination-content {
+      padding: 22px;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .destination h3 {
+      margin: 0 0 10px;
+      font-size: 1.35rem;
+      color: var(--primary-dark);
+    }
+
+    .destination p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    .price {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .cta {
+      padding: 90px 0;
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: white;
+    }
+
+    .cta-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 26px;
+      flex-wrap: wrap;
+    }
+
+    .cta-box h2 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 3vw, 3rem);
+    }
+
+    .cta-box p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.05rem;
+    }
+
+    footer {
+      background: #0f172a;
+      color: rgba(255, 255, 255, 0.8);
+      padding: 26px 0;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner,
+      .features,
+      .destinations {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero {
+        padding-top: 56px;
+      }
+
+      .hero-copy,
+      .booking-card {
+        padding: 22px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#" class="brand">Pato<span>rism</span></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#book" class="button">Plan Your Trip</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow">Discover more</span>
+          <h1>Adventure begins where your comfort zone ends.</h1>
+          <p class="lead">
+            Explore handpicked destinations, vibrant cultures, and unforgettable escapes with a travel experience designed around your dream getaway.
+          </p>
+          <div class="hero-actions">
+            <a href="#destinations" class="button">Explore Trips</a>
+            <a href="#about" class="button secondary">Learn More</a>
+          </div>
+          <div class="stats">
+            <div class="stat">
+              <strong>120+</strong>
+              <span>Destinations</span>
+            </div>
+            <div class="stat">
+              <strong>25k</strong>
+              <span>Happy Travelers</span>
+            </div>
+            <div class="stat">
+              <strong>4.9/5</strong>
+              <span>Average Review</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="booking-card" id="book">
+          <h3>Book your escape</h3>
+          <div class="form-grid">
+            <label class="field">
+              Destination
+              <select>
+                <option>Maldives</option>
+                <option>Bali</option>
+                <option>Paris</option>
+                <option>Kyiv</option>
+                <option>Swiss Alps</option>
+              </select>
+            </label>
+            <label class="field">
+              Check-in
+              <input type="date" />
+            </label>
+            <label class="field">
+              Guests
+              <select>
+                <option>2 Adults</option>
+                <option>2 Adults + 1 Child</option>
+                <option>Family of 4</option>
+                <option>Group Trip</option>
+              </select>
+            </label>
+            <button class="button">Search Packages</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2>Why travelers choose Patourism</h2>
+          <p>From tropical beaches to mountain escapes, we craft stress-free journeys that feel personal.</p>
+        </div>
+
+        <div class="features" id="experiences">
+          <article class="feature">
+            <div class="icon">✈️</div>
+            <h3>Tailored itineraries</h3>
+            <p>Every trip is customized to match your pace, interests, and travel goals, from luxury stays to immersive adventures.</p>
+          </article>
+          <article class="feature">
+            <div class="icon">🧭</div>
+            <h3>Local expertise</h3>
+            <p>Our planners connect you with hidden gems, authentic food spots, and experiences only locals know about.</p>
+          </article>
+          <article class="feature">
+            <div class="icon">💬</div>
+            <h3>24/7 support</h3>
+            <p>Need help while abroad? We’re available around the clock to make every part of your journey seamless.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="destinations">
+      <div class="container">
+        <div class="section-head">
+          <h2>Popular destinations</h2>
+          <p>Find your next unforgettable escape.</p>
+        </div>
+
+        <div class="destinations">
+          <article class="destination">
+            <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80" alt="Maldives beach" />
+            <div class="destination-content">
+              <div class="meta">
+                <span>Ocean Escape</span>
+                <span>5 nights</span>
+              </div>
+              <h3>Maldives</h3>
+              <p>Crystal-clear lagoons, overwater villas, and calm sunsets every evening.</p>
+              <div class="meta">
+                <span class="price">$1,290</span>
+                <a href="#book" class="button">Book Now</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="destination">
+            <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=900&q=80" alt="Bali coastline" />
+            <div class="destination-content">
+              <div class="meta">
+                <span>Culture + Surf</span>
+                <span>6 nights</span>
+              </div>
+              <h3>Bali</h3>
+              <p>Ubud retreats, tropical beaches, and a perfect balance of adventure and relaxation.</p>
+              <div class="meta">
+                <span class="price">$980</span>
+                <a href="#book" class="button">Book Now</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="destination">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=80" alt="Eiffel Tower in Paris" />
+            <div class="destination-content">
+              <div class="meta">
+                <span>City Romance</span>
+                <span>4 nights</span>
+              </div>
+              <h3>Paris</h3>
+              <p>Historic charm, fine dining, and iconic views that turn every moment into a memory.</p>
+              <div class="meta">
+                <span class="price">$1,640</span>
+                <a href="#book" class="button">Book Now</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container cta-box">
+        <div>
+          <h2>Ready to go somewhere unforgettable?</h2>
+          <p>Let us build a personalized itinerary that matches your travel dreams.</p>
+        </div>
+        <a href="#book" class="button" style="background: white; color: var(--primary-dark); box-shadow: none;">Start Planning</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2025 Patourism. Crafted for dreamers and explorers.</div>
+  </footer>
+</body>
+</html>
