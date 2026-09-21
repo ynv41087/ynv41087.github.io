@@ -11,21 +11,43 @@
             padding: 0;
         }
         header {
-            background-color: #333;
+            background-color: #49c06b;
+            Width: 1440px;
             color: #fff;
             padding: 20px 0;
             text-align: center;
+            height: 75px;
         }
         .container {
-            width: 80%;
+            width: 70%;
             margin: 0 auto;
+            padding: 1em;
+            height: 80%;
+        }
+        #hero {
+            justify-text: center padding: 50px;
+              
         }
         .flex{
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
+        .locations {
+            width: 900px;
+            height: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            border:1px solid black;
+            justify-content: center;
+        }
+        .card{
+            width: 250px;
+            height: 200px;
+            background-color: #f4f4f4;
+            margin: 10px;
+            justify-content: center;
+        }
         </style>
 </head>
 <body>
@@ -34,15 +56,25 @@
             <div id="logo">Logo</div>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Attractions</a></li>
+                    <li><a href="#">Plan a Visit</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div id="hero"></div>
-    <div><h1>Welcome to <span>PA</span></h1></div>
+    <div><h1>Welcome to <span>Pennsylvania</span></h1></div>
+    <div>
+        <div class="container">
+            <h2>Tourist Locations</h2>
+            <div class="locations">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>
