@@ -6,9 +6,15 @@
     <title>Document</title>
     <style>
         body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            width: 100%;
+            background-color:#fcfcfcc4;
+
         }
         header {
             background-color: #49c06b;
@@ -23,10 +29,22 @@
             margin: 0 auto;
             padding: 1em;
             height: 80%;
+            justify-content: center;
         }
         #hero {
-            justify-text: center padding: 50px;
-              
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80%;
+        }
+        .hero-container {
+            display: flex;
+            width: 70%;
+            margin: 0 auto;
+            padding: 1em;
+            height: 80%;
+            justify-content: center;
+            align-items: center;
         }
         .flex{
             display: flex;
@@ -35,19 +53,118 @@
         }
         .locations {
             width: 900px;
-            height: 500px;
+            max-width: 50%;
+            height: 1100px;
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
             border:1px solid black;
-            justify-content: center;
+            padding-right: 20px;
+
         }
-        .card{
-            width: 250px;
-            height: 200px;
-            background-color: #f4f4f4;
-            margin: 10px;
+        .card-container {
+            display: flex;
+            flex-wrap: wrap; /* allow wrapping to next row */
             justify-content: center;
+            gap: 20px;       /* space between cards */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px;
+            justify-content: center; /* center the cards horizontally */
         }
+         .card {
+            flex: 0 0 calc(33.333% - 16px); /* 3 cards per row */
+             width: 300px;
+             background: #fff;
+             border-radius: 8px;
+              box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+              overflow: hidden;
+         }
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .card-body {
+            padding: 12px;
+       }
+       @media (max-width: 768px) {
+       .card {
+        flex: 0 0 calc(50% - 16px); /* 2 cards per row on tablet */
+       }
+       }
+
+       @media (max-width: 480px) {
+       .card {
+         flex: 0 0 100%; /* 1 card per row on mobile */
+       }
+       .card {
+        flex: 0 0 calc(33.333% - 16px); /* 3 cards per row */
+        width: 300px;
+        background: #fff;
+         border-radius: 8px;
+         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+         overflow: hidden;
+       }
+       .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+       }
+       .card-body {
+        padding: 12px;
+       }
+
+      @media (max-width: 768px) {
+       .card {
+         flex: 0 0 calc(50% - 16px); /* 2 cards per row on tablet */
+        }
+       }
+
+       @media (max-width: 480px) {
+       .card {
+          flex: 0 0 100%; /* 1 card per row on mobile */
+        }
+       }
+.card-content {
+  height: 130px;
+
+.card h3 {
+  margin-top: 0;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.aboutpa-section {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    background: #e6cd69;
+    align-items: center;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.map-container img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+.about-text h2 {
+    margin-bottom: 15px;
+}
+.footer-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    background: #bcd3c2;
+    padding: 30px 50px;
+    color: #49c06b;
+}
+  
         </style>
 </head>
 <body>
@@ -63,18 +180,71 @@
             </nav>
         </div>
     </header>
-    <div id="hero"></div>
+    <container id="hero-container">
+    <div id="hero"> </div>
+    <img src="Statecapito.png" alt="Hero Image">
     <div><h1>Welcome to <span>Pennsylvania</span></h1></div>
-    <div>
-        <div class="container">
-            <h2>Tourist Locations</h2>
-            <div class="locations">
-                <div class="card"></div>
-                <div class="card"></div>
-                <div class="card"></div>
+    </container>
+    <div class="locations">
+         <section class="card-container">
+            <article class="card">
+                <img src="https://via.placeholder.com/300x180" alt="Card 1">
+                <div class="card-body"><h3>Card 1</h3><p>Description here.</p></div>
+             </article>
+             <article class="card">
+                <img src="https://via.placeholder.com/300x180" alt="Card 2">
+                 <div class="card-body"><h3>Card 2</h3><p>Description here.</p></div>
+            </article>
+  <article class="card">
+    <img src="https://via.placeholder.com/300x180" alt="Card 3">
+    <div class="card-body"><h3>Card 3</h3><p>Description here.</p></div>
+  </article>
+</section>
+ <section class="card-container">
+            <article class="card">
+                <img src="https://via.placeholder.com/300x180" alt="Card 1">
+                <div class="card-body"><h3>Card 1</h3><p>Description here.</p></div>
+             </article>
+             <article class="card">
+                <img src="https://via.placeholder.com/300x180" alt="Card 2">
+                 <div class="card-body"><h3>Card 2</h3><p>Description here.</p></div>
+            </article>
+  <article class="card">
+    <img src="https://via.placeholder.com/300x180" alt="Card 3">
+    <div class="card-body"><h3>Card 3</h3><p>Description here.</p></div>
+  </article>
+</section>
+</div>
 
-            </div>
-        </div>
+<section class="aboutpa-section">
+    <div class="map-container">
+        <img src="https://via.placeholder.com/1440x75" alt="Map">
     </div>
+    <div class="about-text">
+    <h2>About PA</h2>
+    <p>Pennsylvania is one of the oldest states in Unites States. This precious state is full of historical treasures and landmarks. </p>
+    <a href="#" class="More">Learn More</a>
+    </div>
+</section>
+
+<footer class="footer-banner">
+    <div class="brand">
+        <h1> PA ADVENTURE</h1>
+    </div>
+    <div class="contact-info">
+        <h3>Contact Us</h3>
+        <p>PA Tourism Center</p>
+        <p> Phone: (838) 350-3089</p>
+        <p>(878) 654-7891</p>
+    </div>
+    <div class="email-info">
+        <p>Email:</p>
+        <p><a href="mailto:paadventure.com">paadventure.com</a></p>
+    </div>
+</footer>
+
+
+
+</div>
 </body>
 </html>
