@@ -9,6 +9,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -17,25 +18,57 @@
 
         }
         header {
-            background-color: #49c06b;
+            background-color: #bcd3c2;
             Width: 1440px;
-            color: #fff;
+            color: #040404;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             padding: 20px 0;
             text-align: center;
             height: 75px;
         }
         .container {
-            width: 70%;
+            width: 65%;
             margin: 0 auto;
             padding: 1em;
             height: 80%;
             justify-content: center;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav li {
+            padding: 0 0.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: inherit;
         }
         #hero {
             display: flex;
             align-items: center;
             justify-content: center;
             height: 80%;
+        }
+
+        .welcome-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 900px;
+            height: 150px;
+            background-color: #b79b69;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .welcome-box h1 {
+            margin: 0;
         }
         .hero-container {
             display: flex;
@@ -76,6 +109,8 @@
             justify-content: center; /* center the cards horizontally */
         }
          .card {
+            display: flex;
+            flex-direction: column;
             flex: 0 0 calc(33.333% - 16px); /* 3 cards per row */
              width: 300px;
              background: #fff;
@@ -89,7 +124,14 @@
             object-fit: cover;
         }
         .card-body {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
             padding: 10px;
+       }
+
+       .card-body a {
+            margin-top: auto;
        }
 .card-content {
   height: 130px;
@@ -110,11 +152,11 @@
     grid-template-columns: 1fr 1fr;
     background: #b79b69;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
-.map-container img{
-    margin: 15px;
+.map-container iframe{
+    margin: 20px;
     width: 500px;
     height: 450px;
     display: block;
@@ -136,7 +178,7 @@
     width: 900px;
     align-items:flex-start;
     background: #bcd3c2;
-    padding: 30px 50px;
+    padding: 20px 40px;
     color: #000000;
 }
   
@@ -145,7 +187,7 @@
 <body>
     <header>
         <div class="container flex">
-            <div id="logo">Logo</div>
+            <div id="logo">PA Adventure</div>
             <nav>
                 <ul>
                     <li><a href="#">Menu</a></li>
@@ -158,7 +200,7 @@
     <div id="hero-container">
     <div id="hero"> </div>
     <img src="projects/project-1/Statecapito.png " alt="Hero Image" width="900" height="600">
-    <div>
+    <div class="welcome-box">
         <h1>Welcome to <span>Pennsylvania</span></h1>
     </div>
     </div>
@@ -169,6 +211,7 @@
                 <div class="card-body">
                     <h3>Gettysburg National Military Park</h3>
                     <p>Gettysburg National Military Park is the perfect place for a Civil War History lover. It contains multiple monuments in rememberance if the Gettysburg battle.</p>
+                    <a href="https://www.nps.gov/gett/index.htm">Learn More</a>
                 </div>
              </article>
              <article class="card">
@@ -176,13 +219,15 @@
                  <div class="card-body">
                     <h3>Hershey Park</h3>
                     <p>Hershey offers the perfect family vacation day. It provides a variety of activities such as roller coasters, waterparks, Zoo America, as wells as restaurants </p>
+                    <a href="https://www.hersheypark.com/">Learn More</a>
                 </div>
             </article>
   <article class="card">
     <img src="projects/project-1/Statecapito.png" alt="Card 3">
     <div class="card-body">
         <h3>State Capitol</h3>
-        <p>Pennsylvania state capitol is a beautiful architectural monument surrounded by fountains and parks. Inside tours are offered at location.</p> 
+        <p>Pennsylvania state capitol is a beautiful architectural monument surrounded by fountains and parks. Inside tours are offered at location.</p>
+        <a href="https://www.pacapitol.com/">Learn More</a>
     </div>
   </article>
 </div>
@@ -192,31 +237,35 @@
                 <div class="card-body">
                     <h3>Pine Grove Furnace State Park</h3>
                     <p>Pine Grove Furnace Park is located south central Pennsylvania. It has two main lakes provide different spots to spend a relaxing family day.</p>
+                    <a href="https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/pine-grove-furnace-state-park">Learn More</a>
                 </div>
              </article>
              <article class="card">
                 <img src="projects/project-1/Rectangle 30.png" alt="Card 2">
                  <div class="card-body">
                     <h3>Lancaster Cental Market</h3>
-                    <p>Lancaster Central Market was established in 1730. It is very active with a variety of sales of fruits, vegetables, orders and souveniers.</p></div>
+                    <p>Lancaster Central Market was established in 1730. It is very active with a variety of sales of fruits, vegetables, orders and souvenirs.</p>
+                    <a href="https://centralmarketlancaster.com/">Learn More</a>
+                </div>
             </article>
   <article class="card">
     <img src="projects/project-1/DSC_0377 1.png" alt="Card 3">
     <div class="card-body">
         <h3>World's End State Park</h3>
         <p>World's End State Park is a 780-acre park that covers a series of waterfalls. Tree leaves change color during fall creating a beautiful view most people adore.</p>
+        <a href="https://www.pa.gov/agencies/dcnr/recreation/where-to-go/state-parks/find-a-park/worlds-end-state-park">Learn More</a>
     </div>
   </article>
 </div>
 </div>
 <div class="aboutpa-section">
     <div class="map-container">
-        <img src="https://placehold.co/1440x75" alt="Map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3079166.2883103965!2d-80.24902279308775!3d41.090883157397634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882d80261e32e589%3A0xc24621475022b43d!2sPennsylvania!5e0!3m2!1sen!2sus!4v1790208156736!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
     </div>
     <div class="about-text">
     <h2>About PA</h2>
     <p>Pennsylvania is one of the oldest states in Unites States. This precious state is full of historical treasures and landmarks. </p>
-    <a href="#" class="More">Learn More</a>
+    <a href="https://www.britannica.com/place/Pennsylvania-state" class="More">Learn More</a>
     </div>
 </div>
 
