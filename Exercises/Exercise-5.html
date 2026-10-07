@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5</title>
+</head>
+<style>
+    body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Georgia, 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background-color:#faf9fb94;
+    }
+
+            @media (max-width: 1440px) {
+           body {
+           background-color: rgb(254, 252, 252);
+            font-size: 14px;
+         }
+
+        }
+        header {
+            background-color: #bcdbaf;
+            Width: 1440px;
+            color: #040404;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px 0;
+            text-align: center;
+            height: 75px;
+        }
+        .container {
+            width: 65%;
+            margin: 0 auto;
+            padding: 1em;
+            height: 80%;
+            justify-content: center;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 1.5rem;
+            }
+        .locations {
+            width: 1440px;
+            max-width: 70%;
+            height: 850px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            padding-right: 20px;
+
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap; /* allow wrapping to next row */
+            justify-content: center;
+            gap: 20px;       /* space between cards */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5px;
+            justify-content: center; /* center the cards horizontally */
+        }
+         .card {
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 calc(33.333% - 16px); /* 3 cards per row */
+             width: 300px;
+             background: #fff;
+             border-radius: 8px;
+              box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+              overflow: hidden;
+         }
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .card-body {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            padding: 10px;
+       }
+
+       .card-body a {
+            margin-top: auto;
+       }
+.card-content {
+  height: 130px;
+}
+.card h3 {
+  margin-top: 0;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+}
+</style>
+<body>
+     <header>
+        <div class="container flex">
+            <div id="logo">Art</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Styles</a></li>
+                </ul>
+            </nav>
+            <div class="locations">
+         <div class="card-container">
+            <article class="card">
+                <img src="../images/stock1.jpg" alt="Card 1">
+                <div class="card-body">
+                    <h3>Gettysburg National Military Park</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="https://unsplash.com/photos/red-blue-and-white-flowers-5TK1F5VfdIk">Learn More</a>
+                </div>
+             </article>
+             <article class="card">
+                <img src="../images/stock2.jpg" alt="Card 2">
+                 <div class="card-body">
+                    <h3>Hershey Park</h3>
+                    <p>Lore ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="https://unsplash.com/photos/abstract-swirling-colors-of-green-purple-and-red-xvU69MeSQHI">Learn More</a>
+                </div>
+        </div>
+    </header>
+</body>
+</html>
