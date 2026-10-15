@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructional Site</title>
+    <style>
+        :root {
+            --page-bg: #f5f1f1;
+            --header-bg: #f8c8c8;
+            --text-dark: #333;
+            --card-border: #ddd;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--page-bg);
+            display: flex;
+            justify-content: center;
+        }
+
+        .web-container {
+            width: 100%;
+            max-width: 800px;
+            background: #FFFFFF;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin: 20px 0;
+        }
+
+        header {
+            background: var(--header-bg);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 28px;
+            font-weight: normal;
+            margin: 0;
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero-section {
+            padding: 0px 0px;
+            text-align: center;
+        }
+
+        .hero-image-container {
+            width: 100%;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 4px;
+            background: #f3f3f3;
+            position: relative;
+        }
+        .hero-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay-shape {
+            position: absolute;
+            top: 28%;
+            size: 40%;
+            left: 405;
+            width: 70%;
+            height: 40%;
+            background: #f8c8c8;
+        }
+
+        .text-overlay1 {
+            position: absolute;
+            left: 50%;
+            top: 35%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px #000000;
+    
+        }
+
+        .text-overlay2 {
+            position: absolute;
+            left: 50%;
+            top: calc(35% + 40px);
+            transform: translateX(-50%);
+            width: 80%;
+            max-width: 520px;
+            color: white;
+            font-size: 16px;
+            font-weight: normal;
+            text-shadow: 1px 1px 2px #000000;
+            text-align: center;
+        }
+
+        .circle-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="web-container">
+        <header>
+            <h1 class="logo">Thread and Knots</h1>
+            <nav>
+                <ul>
+                    <li><a href="instructionalsite.html">Home</a></li>
+                    <li><a href="about2.html">About</a></li>
+                    <li><a href="bracelets.html">Bracelets</a></li>
+                    <li><a href= "materials.html">Materials</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--Main Picture-->
+        <section class="hero-section">
+            <div class="hero-image-container">
+                <img src="images/beads-1.png" alt="Thread and Knots bracelet display">
+                <div class="overlay-shape"></div>
+                <div class="text-overlay1">About</div>
+                <div class="text-overlay2">Thread and Knots it a Website made by Yeisha Velez mainly for creative minds who want to learn to make different kinds of bracelets.</div>
+            </div>
+        </section>
+    </div>
+   
+</body>
+</html>
