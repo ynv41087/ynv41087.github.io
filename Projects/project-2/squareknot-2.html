@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructional Site</title>
+    <style>
+        :root {
+            --page-bg: #f5f1f1;
+            --header-bg: #f8c8c8;
+            --text-dark: #333;
+            --card-border: #ddd;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--page-bg);
+            display: flex;
+            justify-content: center;
+        }
+
+        .web-container {
+            width: 100%;
+            max-width: 800px;
+            background: #FFFFFF;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin: 20px 0;
+        }
+
+        header {
+            background: var(--header-bg);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 28px;
+            font-weight: normal;
+            margin: 0;
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .section-title {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 32px;
+            font-weight: normal;
+            text-align: center;
+            margin: 25px 0 30px 0;
+            padding-bottom: 3px;
+        }
+
+        .background {
+            max-width: 800px;
+            height: 800px;
+            padding: 0;
+            display: flex;
+            margin: 0;
+        }
+
+        .shape {
+            width: 100%;
+            height: 60%;
+            background: #fcdbdb;
+            padding-bottom: 10px;
+            padding: 0;
+            margin: 0;
+        }
+        .step-1 {
+            position: absolute;
+             font-family: Georgia, 'Times New Roman', Times, serif;
+            top: 200px;
+            left: 290px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .step-1-text {
+            position: absolute;
+            max-width: 400px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            left: 40%;
+            top: 20%;
+            transform: translate(-50%, -50%);
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+        }
+
+        .overlay-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            padding-top: 80px;
+            padding-left: 20px;
+        }
+          .bracelet-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2px;
+            padding: 0 10px 10px;
+            margin: -300px 0 0;
+        }
+
+        .grid-item {
+            width: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            text-align: center;
+        }
+
+        .grid-item a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .grid-item p {
+            margin: 6px 0 0;
+            font-size: 14px;
+            line-height: 1;
+            text-align: center;
+        }
+
+           .circle-image {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            overflow: hidden;
+            margin: 0;
+            border: 1px solid #e9b8b8;
+            background: #f7c5c5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="web-container">
+        <header>
+            <h1 class="logo">Thread and Knots</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about2.html">About</a></li>
+                    <li><a href="bracelets.html">Bracelets</a></li>
+                    <li><a href= "materials.html">Materials</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h2 class="section-title">Square Knot</h2>
+        <div class="background">
+            <div class="shape"></div>
+            <p class="step-1"> Step 1</p>
+            <div class="overlay-image">
+                <img src="images/sq1-2.jpg" alt="Square Knot" style="width: 20%; height: 30%; display: block;">
+                <p class="step-1-text">After you have chosen your colors, cut 4ft of thread for the base. Clip the thread by leaving 6 inches of excess.</p>
+            </div>
+        </div>
+
+        <section class="bracelet-grid">
+             <div class="grid-item">
+                <div class="circle-image" aria-label="Braided knot"></div>
+                <p>1</p>
+            </div>
+            <div class="grid-item">
+                <div class="circle-image" aria-label="Braided knot"></div>
+                <p>2</p>
+            </div>
+
+            <div class="grid-item">
+                <div class="circle-image" aria-label="Overhand knot"></div>
+                <p>3</p>
+            </div>
+            <div class="grid-item">
+                <a href="squareknot.html" aria-label="View Square Knot instructions">
+                    <div class="circle-image" aria-label="Square Knot"></div>
+                    <p>4</p>
+                </a>
+            </div>
+
+            <div class="grid-item">
+                <div class="circle-image" aria-label="Braided knot"></div>
+                <p>5</p>
+            </div>
+
+            <div class="grid-item">
+                <div class="circle-image" aria-label="Overhand knot"></div>
+                <p>6</p>
+            </div>
+        </section>
+
+    </div>
+   
+</body>
+</html>
