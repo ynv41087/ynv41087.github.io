@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brews & Bonds Coffeeshop</title>
+    <style> 
+    :root {
+            --page-bg: #f2e7cd;
+            --header-bg: #D9C8AF;
+            --text-dark: #333;
+            --card-border: #ddd;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--page-bg);
+            display: flex;
+            justify-content: center;
+        }
+
+        .web-container {
+            width: 100%;
+            max-width: 1420px;
+            background: #FFFFFF;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin: 0px 0;
+        }
+
+        header {
+            background: var(--header-bg);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: Lora, serif;
+            font-size: 28px;
+            font-weight: normal;
+            margin: 0;
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 50px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero-section {
+            padding: 0px 0px;
+            text-align: center;
+        }
+
+        .hero-image-container {
+            position: relative;
+            width: 100%;
+            max-width: 1420px;
+            height: 469px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 4px;
+            background: #f3f3f3;
+        }
+        .hero-image-container img {
+            width: 100%;
+            height: 100%;
+            min-height: 208px;
+            object-fit: cover;
+            display: block;
+        }
+         .text-overlay {
+            position: absolute;
+            top: 75%;
+            left: 40px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            padding: 0;
+            font-family: 'Lora', serif;
+            color: rgb(2, 2, 2);
+            font-size: clamp(2rem, 4vw, 4rem);
+            line-height: 1.2;
+            z-index: 1;
+            text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+            max-width: 700px;
+        }
+
+        .about-section {
+            background: #f2e7cd;
+            height: 620px;
+            padding: 50px 40px;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-content {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .about-section h2 {
+            width: 70%;
+            font-family: Lora, serif;
+            font-size: 32px;
+            margin: 0;
+        }
+
+        .about-section p {
+            width: 70%;
+            font-family: Outfit, sans-serif;
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 100%;
+            max-height: 360px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+        }
+        .menu-section {
+            background: #D9C8AF;
+            min-height: 620px;
+            padding: 50px 40px;
+            display: grid;
+            grid-template-columns: 1.3fr 1.2fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .menu-content {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .menu-section h2 {
+            padding-top: -50px;
+            width: 100%;
+            font-family: Lora, serif;
+            font-size: 32px;
+            margin: 0 0 40px;
+            text-align: left;
+        }
+
+        .menu-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .menu-section p {
+            width: 100%;
+            font-family: Outfit, sans-serif;
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0;
+        }
+
+        .menu-images {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .menu-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .community-section {
+            padding: 40px 40px 0;
+            background: #f7efe0;
+            height: 620px;
+        }
+
+        .community-image-container {
+            position: relative;
+            width: 100%;
+            max-width: 1420px;
+            height: 540px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #f3f3f3;
+            border-radius: 0;
+            padding-bottom: 24px;
+        }
+
+        .community-image-container img {
+            position: relative;
+            width: 100%;
+            max-width: 1420px;
+            height: 540px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #f3f3f3;
+            border-radius: 0;
+            padding-bottom: 24px;
+        }
+
+        .shape-overlay {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: min(70%, 900px);
+            min-width: 520px;
+            height: 76%;
+            background: rgba(217, 200, 175, 0.75);
+            backdrop-filter: blur(1px);
+        }
+
+        .community-section .text-overlay {
+            position: absolute;
+            left: 50%;
+            top: 25%;
+            transform: translate(-50%, -50%);
+            width: min(50%, 700px);
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: clamp(28px, 2.5vw, 40px);
+            font-family: 'Lora', serif;
+        }
+        .overlay-copy {
+            position: absolute;
+            left: 50%;
+            top: 52%;
+            width: min(50%, 520px);
+            min-width: 280px;
+            transform: translate(-50%, -50%);
+            display: block;
+            text-align: left;
+            font-size: clamp(16px, 1.8vw, 20px);
+            font-family: 'Outfit', sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="web-container">
+        <header>
+            <a href="index.html" class="logo">Brews & Bonds</a>
+            <nav id="primary-nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--Main Picture-->
+        <section class="hero-section">
+            <div class="hero-image-container">
+                <img src="images/coffee-1.png" alt="Coffee image">
+                <div class="text-overlay">Discover the Love<br>within a Cup of Coffee</div>
+            </div>
+        </section>    
+
+        <!--Explore more about us Section-->
+        <section class="about-section">
+            <div class="about-content">
+                <h2>San Francisco Coffee Seasoned with Love</h2>
+                <p>Our San Francisco inspired coffee contains the coffee Aroma, and the beautiful familiar coffeehouse representations that lead to our love. Each cup is made with love and blended carefully to provide customers the closest flavor to San Francisco’s coffee cups.</p>
+                <p>Each coffee bean was picked from the finest locally sorted beans, providing a variety of flavors and roast types.</p>
+            </div>
+            <img class="about-image" src="images/coffee-2.png" alt="Coffee image">
+        </section>
+
+         <!--Seasoned Signature-Menu Section-->
+        <section class="menu-section">
+            <div class="menu-left">
+                <h2>Season Signatures</h2>
+                <div class="menu-images">
+                    <img class="menu-image" src="images/coffee-2.png" alt="Coffee image">
+                    <img class="menu-image" src="images/coffee-2.png" alt="Coffee image">
+                    <img class="menu-image" src="images/coffee-2.png" alt="Coffee image">
+                    <img class="menu-image" src="images/coffee-2.png" alt="Coffee image">
+                </div>
+            </div>
+            <div class="menu-content">
+                <p>Our Menu favorites and Seasonal Signatures mostly include warm coffee cappuccinos and pumpkin spice flavors. Although coffee is our main drink, other drinks and accompanying appetizers are served such as freshly baked muffins, bagels and croissants. </p>
+                <p>
+                    Espresso - $3.50<br>
+                    Cappuccino - $4.00<br>
+                    Mocha - $4.50<br>
+                    Matcha Latte - $4.50<br>
+                    Pumpkin Spice Frappuccino- $4.50
+                </p>
+
+                <p>
+                    Bagel - $3.00<br>
+                    Muffin - $2.50<br>
+                    Sandwich (e.g., ham and cheese, turkey and avocado) - $6.00
+                </p>
+            </div>
+        </section>
+
+         <!--Be Part of the Community-->
+        <section class="community-section">
+            <div class="community-image-container">
+                <img src="images/coffee-1.png" alt="Coffee image">
+                <div class="shape-overlay"></div>
+                <div class="text-overlay">Be Part of the Community</div>
+                <div class="overlay-copy">
+                     <p>Brews & Bonds provides a variety of family and group events. We believe that the love that brought us together may be enjoyed by everyone in Harrisburg. Our main events include live acoustic music, coffee tasting and book club.</p>
+                     <p>Each day of the week is a fun day to taste and share with others. Schedule is provided in Events. </p>
+                </div>
+            </div>
+        </section>    
+
+    
+</body>
+</html>
