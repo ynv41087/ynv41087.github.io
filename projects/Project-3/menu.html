@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brews & Bonds Coffeeshop</title>
+    <style> 
+    :root {
+            --page-bg: #f2e7cd;
+            --header-bg: #D9C8AF;
+            --text-dark: #333;
+            --card-border: #ddd;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--page-bg);
+            display: flex;
+            justify-content: center;
+        }
+
+        .web-container {
+            width: 100%;
+            max-width: 1420px;
+            background: #FFFFFF;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin: 0px 0;
+        }
+
+        header {
+            background: var(--header-bg);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: Lora, serif;
+            font-size: 28px;
+            font-weight: normal;
+            margin: 0;
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 50px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .about-header {
+            text-align: center;
+            padding: 50px 40px;
+            background-color: #f2e7cd;
+            width: 100%;
+            height: 30px;
+        }
+
+        .about-section {
+            background: #f2e7cd;
+            height: 620px;
+            padding: 50px 40px;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-content {
+            width: 100%;
+            max-width: 700px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .about-section h2 {
+            width: 100%;
+            font-family: Lora, serif;
+            font-size: 32px;
+            margin: 0;
+        }
+
+        .about-section p {
+            width: 100%;
+            font-family: Outfit, sans-serif;
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0;
+        }
+
+        .menu-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        .menu-columns {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 100px;
+        }
+
+        .menu-item {
+            display: grid;
+            grid-template-columns: auto minmax(16px, 1fr) auto;
+            align-items: baseline;
+            gap: 10px;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        .menu-leader {
+            border-bottom: 2px dotted currentColor;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 100%;
+            max-height: 360px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+        }
+        .about-section-2 {
+            background: #D9C8AF;
+            height: 780px;
+            padding: 30px 40px 50px;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            align-items: start;
+            gap: 40px;
+        }
+
+        .about-section-2 .about-content {
+            width: 100%;
+            max-width: 700px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .about-section-2 h2 {
+            width: 100%;
+            font-family: Lora, serif;
+            font-size: 32px;
+            margin: 0;
+        }
+
+        .about-section-2 p {
+            width: 100%;
+            font-family: Outfit, sans-serif;
+            font-size: 20px;
+            line-height: 2.0;
+            max-width: 700px;
+            margin: 0;
+        }
+
+        .about-section-2 .about-image {
+            width: 100%;
+            height: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+        }
+
+            .about-section-3 {
+            background: #f2e7cd;
+                min-height: 810px;
+            padding: 40px 40px 50px;
+            display: grid;
+                grid-template-columns: 1fr;
+            align-items: start;
+            gap: 40px;
+        }
+
+        .about-section-3 .about-content {
+            width: 100%;
+                max-width: none;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+            @media (max-width: 700px) {
+                .menu-columns {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+        .about-section-3 h2 {
+            width: 100%;
+            font-family: Lora, serif;
+            font-size: 32px;
+            margin: 0;
+        }
+
+        .about-section-3 p {
+            width: 100%;
+            font-family: Outfit, sans-serif;
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="web-container">
+        <header>
+            <a href="index.html" class="logo">Brews & Bonds</a>
+            <nav id="primary-nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="about-header">
+            <h1>Menu</h1>
+        </div>
+
+        <!-- Menu section 1 -->
+        <section class="about-section">
+            <img class="about-image" src="images/coffee-2.png" alt="Coffee image">
+            <div class="about-content">
+                <h2>Appetizers</h2>
+                <ul class="menu-list">
+                    <li class="menu-item"><span>Croissant</span><span class="menu-leader" aria-hidden="true"></span><span>$2.50</span></li>
+                    <li class="menu-item"><span>Bagel</span><span class="menu-leader" aria-hidden="true"></span><span>$3.00</span></li>
+                    <li class="menu-item"><span>Muffin</span><span class="menu-leader" aria-hidden="true"></span><span>$2.50</span></li>
+                    <li class="menu-item"><span>Scone</span><span class="menu-leader" aria-hidden="true"></span><span>$3.00</span></li>
+                    <li class="menu-item"><span>Sandwich (e.g., ham and cheese, turkey and avocado)</span><span class="menu-leader" aria-hidden="true"></span><span>$6.00</span></li>
+                    <li class="menu-item"><span>Salad (e.g., chicken Caesar, Greek)</span><span class="menu-leader" aria-hidden="true"></span><span>$7.50</span></li>
+                    <li class="menu-item"><span>Quiche</span><span class="menu-leader" aria-hidden="true"></span><span>$5.50</span></li>
+                    <li class="menu-item"><span>Soup of the Day</span><span class="menu-leader" aria-hidden="true"></span><span>$4.50</span></li>
+                    <li class="menu-item"><span>Fruit Parfait</span><span class="menu-leader" aria-hidden="true"></span><span>$4.50</span></li>
+                </ul>
+            </div>
+        </section>
+
+          <!--About section 2-->
+        <section class="about-section-2">
+            <div class="about-content">
+               <h2>Coffee</h2>
+                <ul class="menu-list">
+                    <li class="menu-item"><span>Pumpkin Spice Frappuccino</span><span class="menu-leader" aria-hidden="true"></span><span>$4.50</span></li>
+                    <li class="menu-item"><span>Espresso</span><span class="menu-leader" aria-hidden="true"></span><span>$2.50</span></li>
+                    <li class="menu-item"><span>Americano</span><span class="menu-leader" aria-hidden="true"></span><span>$3.00</span></li>
+                    <li class="menu-item"><span>Latte</span><span class="menu-leader" aria-hidden="true"></span><span>$4.00</span></li>
+                    <li class="menu-item"><span>Cappuccino</span><span class="menu-leader" aria-hidden="true"></span><span>$4.00</span></li>
+                    <li class="menu-item"><span>Mocha</span><span class="menu-leader" aria-hidden="true"></span><span>$4.50</span></li>
+                    <li class="menu-item"><span>Macchiato</span><span class="menu-leader" aria-hidden="true"></span><span>$4.50</span></li>
+                    <li class="menu-item"><span>Flat White</span><span class="menu-leader" aria-hidden="true"></span><span>$4.50</span></li>
+                    <li class="menu-item"><span>Iced Coffee</span><span class="menu-leader" aria-hidden="true"></span><span>$4.00</span></li>
+                      <li class="menu-item"><span>Cold Brew</span><span class="menu-leader" aria-hidden="true"></span><span>$4.50</span></li>
+                    <li class="menu-item"><span>Frappuccino</span><span class="menu-leader" aria-hidden="true"></span><span>$5.00</span></li>
+                    <li class="menu-item"><span>Chai Tea Latte</span><span class="menu-leader" aria-hidden="true"></span><span>$4.50</span></li>
+                    <li class="menu-item"><span>Matcha Latte</span><span class="menu-leader" aria-hidden="true"></span><span>$4.50</span></li>
+                </ul>
+                <h2>Hot Chocolate</h2>
+                  <ul class="menu-list">
+                    <li class="menu-item"><span>Hot Chocolate</span><span class="menu-leader" aria-hidden="true"></span><span>$3.50</span></li>
+                     <li class="menu-item"><span> Peanut Butter Hot Chocolate</span><span class="menu-leader" aria-hidden="true"></span><span>$3.50</span></li>
+                  </ul>
+            </div>
+            <img class="about-image" src="images/coffee-2.png" alt="Coffee image">
+        </section>
+
+        <!--About section 3-->
+        <section class="about-section-3">
+            <div class="about-content">
+                <h2>Tea</h2>
+                <div class="menu-columns">
+                    <ul class="menu-list">
+                    <li class="menu-item"><span>Herbal Tea</span><span class="menu-leader" aria-hidden="true"></span><span>$3.00</span></li>
+                    <li class="menu-item"><span>Iced Tea</span><span class="menu-leader" aria-hidden="true"></span><span>$3.50</span></li>
+                    <li class="menu-item"><span>Earl Grey</span><span class="menu-leader" aria-hidden="true"></span><span>$4.00</span></li>
+                    <li class="menu-item"><span>English Breakfast</span><span class="menu-leader" aria-hidden="true"></span><span>$3.00</span></li>
+                    <li class="menu-item"><span>Green Tea</span><span class="menu-leader" aria-hidden="true"></span><span>$4.00</span></li>
+                    <li class="menu-item"><span>Jasmine Tea</span><span class="menu-leader" aria-hidden="true"></span><span>$3.00</span></li>
+                    <li class="menu-item"><span>Chamomile Tea</span><span class="menu-leader" aria-hidden="true"></span><span>$3.00</span></li>
+                    <li class="menu-item"><span>Peppermint Tea</span><span class="menu-leader" aria-hidden="true"></span><span>$4.00</span></li>
+                    <li class="menu-item"><span>Rooibos Tea</span><span class="menu-leader" aria-hidden="true"></span><span>$3.00</span></li>
+                      <li class="menu-item"><span>Matcha Tea</span><span class="menu-leader" aria-hidden="true"></span><span>$3.50</span></li>
+                    <li class="menu-item"><span>Oolong Tea</span><span class="menu-leader" aria-hidden="true"></span><span>$4.00</span></li>
+                    <li class="menu-item"><span>White Tea</span><span class="menu-leader" aria-hidden="true"></span><span>$3.50</span></li>
+                </ul>
+                    <ul class="menu-list">
+                    <li class="menu-item"><span>Herbal Blend (e.g., Hibiscus, ginger, lemongrass)</span><span class="menu-leader" aria-hidden="true"></span><span>$4.00</span></li>
+                    <li class="menu-item"><span>Chai Tea</span><span class="menu-leader" aria-hidden="true"></span><span>$3.00</span></li>
+                    <li class="menu-item"><span>Darjeeling Tea</span><span class="menu-leader" aria-hidden="true"></span><span>$3.00</span></li>
+                    <li class="menu-item"><span>Assam Tea</span><span class="menu-leader" aria-hidden="true"></span><span>$3.00</span></li>
+                    <li class="menu-item"><span>Sencha Tea</span><span class="menu-leader" aria-hidden="true"></span><span>$4.00</span></li>
+                    <li class="menu-item"><span>Genmaicha Tea</span><span class="menu-leader" aria-hidden="true"></span><span>$3.50</span></li>
+                    <li class="menu-item"><span>Pu-erh Tea</span><span class="menu-leader" aria-hidden="true"></span><span>$4.00</span></li>
+                    <li class="menu-item"><span>Lemon Verbena Tea</span><span class="menu-leader" aria-hidden="true"></span><span>$3.00</span></li>
+                    <li class="menu-item"><span>Mint Tea</span><span class="menu-leader" aria-hidden="true"></span><span>$3.00</span></li>
+                    <li class="menu-item"><span>Berry Infusion (e.g., raspberry, strawberry)</span><span class="menu-leader" aria-hidden="true"></span><span>$3.00</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+       
+
+        </section>
+
+    
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brews & Bonds Coffeeshop</title>
+    <style> 
+    :root {
+            --page-bg: #f2e7cd;
+            --header-bg: #D9C8AF;
+            --text-dark: #333;
+            --card-border: #ddd;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--page-bg);
+            display: flex;
+            justify-content: center;
+        }
+
+        .web-container {
+            width: 100%;
+            max-width: 1420px;
+            background: #FFFFFF;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin: 0px 0;
+        }
+
+        header {
+            background: var(--header-bg);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: Lora, serif;
+            font-size: 28px;
+            font-weight: normal;
+            margin: 0;
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 50px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .about-header {
+            text-align: center;
+            padding: 50px 40px;
+            background-color: #f2e7cd;
+            width: 100%;
+            height: 30px;
+        }
+
+        .about-section {
+            background: #f2e7cd;
+            height: 820px;
+            padding: 50px 40px;
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-content {
+            width: 100%;
+            max-width: none;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .about-section h2 {
+            width: 100%;
+            font-family: Lora, serif;
+            font-size: 32px;
+            margin: 0;
+        }
+
+        .about-section p {
+            width: 100%;
+            font-family: Outfit, sans-serif;
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: none;
+            margin: 0;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 100%;
+            max-height: 360px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+        }
+        .about-section-2 {
+            background: #D9C8AF;
+            height: 620px;
+            padding: 50px 40px;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-section-2 .about-content {
+            width: 100%;
+            max-width: 700px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .about-section-2 h2 {
+            width: 100%;
+            font-family: Lora, serif;
+            font-size: 32px;
+            margin: 0;
+        }
+
+        .about-section-2 p {
+            width: 100%;
+            font-family: Outfit, sans-serif;
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0;
+        }
+
+        .about-section-2 .about-image {
+            width: 100%;
+            height: 100%;
+            max-height: 360px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+        }
+
+            .about-section-3 {
+            background: #f2e7cd;
+            height: 700px;
+            padding: 50px 40px;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-section-3 .about-content {
+            width: 100%;
+            max-width: 700px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .about-section-3 h2 {
+            width: 100%;
+            font-family: Lora, serif;
+            font-size: 32px;
+            margin: 0;
+        }
+
+        .about-section-3 p {
+            width: 100%;
+            font-family: Outfit, sans-serif;
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0;
+        }
+
+        .about-section-3 .about-image {
+            width: 100%;
+            height: 100%;
+            max-height: 360px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+        }
+
+          .about-section-4 {
+            background: #D9C8AF;
+            height: 620px;
+            padding: 50px 40px;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-section-4 .about-content {
+            width: 100%;
+            max-width: 700px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .about-section-4 h2 {
+            width: 100%;
+            font-family: Lora, serif;
+            font-size: 32px;
+            margin: 0;
+        }
+
+        .about-section-4 p {
+            width: 100%;
+            font-family: Outfit, sans-serif;
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0;
+        }
+
+        .about-section-4 .about-image {
+            width: 100%;
+            height: 100%;
+            max-height: 360px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="web-container">
+        <header>
+            <a href="index.html" class="logo">Brews & Bonds</a>
+            <nav id="primary-nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="about-header">
+            <h1>Events</h1>
+        </div>
+
+        </section>    
+
+        <!--About section 1-->
+        <section class="about-section">
+            <div class="about-content">
+                <h2>Monday</h2>
+                <p>Morning Yoga Class: Start your week with a relaxing yoga session. (8:00 AM - 9:00 AM) </p>
+                <p> Live Acoustic Music: Enjoy soulful acoustic performances by local artists. (7:00 PM - 9:00 PM) </p>
+
+                 <h2>Tuesday</h2>
+                <p> Coffee Tasting Workshop: Learn about different coffee brewing methods and taste various specialty coffees. (6:00 PM - 7:30 PM)  </p>
+                <p> Open Mic Night: Showcase your talent or enjoy the performances of local musicians, poets, and comedians. (8:00 PM - 10:00 PM) </p>
+
+                 <h2>Wednesday</h2>
+                <p> Art Exhibition: Explore the works of local artists displayed throughout the coffee shop. (All day)   </p>
+                <p> Trivia Night: Test your knowledge and compete with friends in a fun-filled trivia competition. (7:00 PM - 9:00 PM) </p>
+
+                
+                 <h2>Thursday</h2>
+                <p>Cooking Class: Join our skilled chef and learn to prepare delicious desserts. Limited spots available, reservations required. (5:00 PM - 7:00 PM) </p>
+                <p>Board Game Night: Gather with friends and enjoy a variety of board games while sipping your favorite drinks. (6:00 PM - 9:00 PM) </p>
+            </div>
+        </section>
+
+          <!--About section 2-->
+        <section class="about-section-2">
+            <div class="about-content">
+                <h2>Friday</h2>
+                <p> Live Jazz Band: Relax and unwind with the smooth tunes of a live jazz band. (7:30 PM - 9:30 PM) </p>
+            </div>
+            <img class="about-image" src="images/coffee-2.png" alt="Coffee image">
+        </section>
+
+        <!--About section 3-->
+        <section class="about-section-3">
+            <img class="about-image" src="images/coffee-2.png" alt="Coffee image">
+            <div class="about-content">
+                <h2>Saturday</h2>
+                <p>Family Day: Bring your kids for a special day of face painting, storytelling, and fun activities. (10:00 AM - 12:00 PM) </p>
+                <p> Poetry Slam: Express your creativity or listen to passionate poets share their work during our poetry slam event. (7:00 PM - 9:00 PM)</p>
+            </div>
+        </section>
+
+   <!--About section 4-->
+        <section class="about-section-4">
+            <div class="about-content">
+                <h2>Sunday</h2>
+                <p>Book Club Meeting: Discuss the latest book selection with fellow book enthusiasts over a cup of coffee. (3:00 PM - 4:30 PM) </p>
+                <p>Sunday Brunch: Indulge in a delicious brunch menu accompanied by live acoustic music. (10:00 AM - 2:00 PM)</p>
+            </div>
+            <img class="about-image" src="images/coffee-2.png" alt="Coffee image">
+        </section>
+       
+
+        </section>
+
+    
+</body>
+</html>
